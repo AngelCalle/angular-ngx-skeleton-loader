@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-ngx-skeleton-loader';
+  
+  contentLoaded: boolean = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.contentLoaded = true;
+    }, 2000);
+  }
 }
